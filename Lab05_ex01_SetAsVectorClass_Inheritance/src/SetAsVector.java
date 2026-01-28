@@ -24,18 +24,22 @@ public class SetAsVector extends Vector<Object> {
 
     //2. Override the 'remove' method from the Vector class so as to check if the element exists in the vector before removing it
     public boolean remove(Object element) {
+        //Condition for checking if the element already exists in the vector
         if (!this.contains(element)) {
+            //If the element does not exist, cannot be removed
             return false;
         }
+        //Call the 'remove' method from the parent class (super = Vector)
         return super.remove(element);
     }
 
-    //'contains' method inherited from Vector (the super class)
+    //3. 'contains' method inherited from Vector (the super class)
     public boolean contains(Object element) {
+        //Call the 'contains' method inherited from the Vector class
         return super.contains(element);
     }
 
-    //'toString' method inherited from Vector
+    //4. 'toString' method inherited from Vector
     public String toString() {
         //Call the 'toString' method inherited from the Vector class
         return super.toString();
