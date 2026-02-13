@@ -35,6 +35,7 @@ public class Main {
             //Check that the value entered is not negative
             if (element < 0) {
                 System.out.println("Negative values not allowed. Try again.");
+                //Return to the 'add element' step
                 continue;
             }
             //If valid, add the element to the set
@@ -61,6 +62,7 @@ public class Main {
             //Check if the value is negative
             if ((n != -1) && (n < 0)) {
                 System.out.println("Negative values not allowed. Try again.");
+                //Return to the 'enter element or stop' step
                 continue;
             }
             //Set condition and message in case the element is in the set
@@ -88,10 +90,11 @@ public class Main {
                 mySet.remove(n);
                 //Display message that value n was removed
                 System.out.println(n + " has been removed from the set");
-                //Display the updated set
+                //If no element remains in the set, display message
                 if (mySet.isEmpty()) {
                     System.out.println("The set is empty.");
                 }
+                //Display the updated set
                 else {
                     System.out.println(mySet);
                 }
